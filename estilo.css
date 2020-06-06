@@ -1,0 +1,240 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@font-face {
+    font-family: "FonteLogo";
+    src: url("_fonts/bubblegum-sans-regular.otf");
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color:#dddddd;
+    color: rgba (0,0,0,1)
+}
+
+
+p {
+    text-align: justify; /*alinha a parte esquerda*/
+    text-indent: 40px; /* paragrafo*/
+}
+a { /*links*/
+    color: #606060;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+figure.foto-legenda { /* referenciei pela class com .(ponto) */
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black;
+    
+}
+figure.foto-legenda img {
+    width: 100%; /* largura */
+    height: 100%; /*altura */
+    
+    
+}
+figure.foto-legenda figcaption { /* legenda da foto */
+    opacity: 0;
+    position: absolute; /* absoluta em relação ao elemento pai que tem posição relativa */
+    background-color: rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    color:white;
+    padding-top: 150px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;     
+}
+figure.foto-legenda:hover figcaption {
+    opacity: 2;
+}
+/* Estilizando o menu*/
+nav#menu ul {
+    list-style: none; /* tirou os marcadores*/
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 250px;
+    
+}
+nav#menu li {
+    display:inline-table; /*alinhou os elementos da lista*/
+    background-color:#dddddd;
+    padding: 10px; /* espaço dentro do obj*/
+    margin: 2px; /* espaço fora do obj*/
+    transition: background-color 1s;
+}
+nav#menu {
+    display: block; /*permite flutuação para o menu*/
+}
+nav#menu li:hover { /* mudar a cor do item do menu ao colocar o mouse*/
+    background-color: gray;
+}
+nav#menu h1{
+    display: none /* retirou o titulo da pg 
+    mas ele ainda possui função semantica*/
+}
+nav#menu a {
+    color: black;
+    text-decoration: none; /*Tirou sublinhado*/
+}
+nav#menu a:hover {
+    text-decoration: underline; /* sublinhado aparece ao clicar*/
+}
+
+/*Formatação interface*/ 
+div#interface {
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto; /* TOP, LEFT, BOTTON, RIGHT*/
+    box-shadow: 0px 0px 5px black;
+    padding: 20px;
+}
+/*Reposicionando Oculos*/
+    header#cabecalho img#icone {
+        position: absolute;
+        left: 750px;
+        top: 70px;
+
+}
+/*Formatando cabeçalho*/
+header#cabecalho {
+    position: relative;
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+header#cabecalho h1{
+    font-family: "FonteLogo", sans-serif;
+    font-size: 30pt;
+    color: slategrey;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    
+    
+}
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: dimgrey;
+    margin-top: -15px;
+    
+}
+section#corpo {
+    width: 500px;
+    display: block;
+    float: left;
+    border-right: 1px solid gray;
+    padding-right: 15px ;
+}
+article#noticia-principal h2 {
+    font-size: 12;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+header#cabecalho-artigo h1 {    
+    font-family: "FonteLogo", sans-serif;
+    font-size: 20pt;
+    color:slategrey;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    
+
+}
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color:#cecece;
+    background-color: #ffffff;
+    margin: 0px;
+    text-shadow: 1px 1px 1px black;
+}
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
+
+}
+.direita { /* tudo da class direita*/
+    text-align: right;
+}
+/*Formatação do aside*/
+    aside#lateral {
+    width: 350px;
+    display: block;
+    float: right;
+    background-color:#dddddd ;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+aside#lateral h1 {
+    font-family: "FonteLogo", sans-serif;
+    font-size: 20pt;
+    color: slategrey;
+    margin-top: 0px;
+}
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+
+}
+
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+footer#rodape p {
+    text-align: center;
+}
+
+/*TABELA SPEC*/
+table#tabelaspec {
+    border: 1px solid gray;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+table#tabelaspec td { /* puxando o estilo pela class*/
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+table#tabelaspec td.ce {
+color: white;
+background-color: rgb(46, 43, 43);
+vertical-align: top;
+font-weight: bold;
+}
+table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+/* formatando caption da tabela*/
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+iframe#frame-spec {
+    width: 410px;
+    height: 300px;
+    border: none;
+}
