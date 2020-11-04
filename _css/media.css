@@ -9,14 +9,14 @@ div#tv-radio {
 audio#musica{
     display: block;
     position: relative;
-    top: 488px;
-    left: 575px;
+    top: 495px;
+    left: 585px;
     widows: 200px; ;
 }
 video#filme{
     display: block;
     position: relative;
-    top: 60px;
+    top: 70px;
     left: 80px;
     width: 450px;
     
